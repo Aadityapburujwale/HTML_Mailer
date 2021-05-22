@@ -16,49 +16,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#33FFCC"
-            android:textSize="16sp"
             android:text="First go to your google Account setting and turn on the option to send Email. \n Click On Below Check Box When You done."
-            />
+            android:textSize="16sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/open_setting_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="GO TO The Setting"
-                android:textSize="16sp"
-                android:layout_weight="1"
-                android:onClick="openGoogleSetting"
                 android:layout_marginRight="15dp"
-                />
+                android:layout_weight="1"
+                android:text="GO TO The Setting"
+                android:textSize="16sp" />
 
             <CheckBox
+                android:id="@+id/done_checkBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Done"
-                android:id="@+id/done_checkBox"
-                android:textSize="20sp"
                 android:layout_weight="1"
-                />
+                android:text="Done"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
-        <View android:layout_width="match_parent"
+        <View
+            android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:background="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
             android:text="Email Id"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:background="@android:color/holo_blue_bright"/>
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/enter_email"
             android:layout_width="match_parent"
@@ -69,10 +69,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
             android:text="Password"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:background="@android:color/holo_blue_bright"/>
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/enter_password"
             android:layout_width="match_parent"
@@ -85,22 +86,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:background="#FFFF00"
-            android:textStyle="bold"
+            android:text="We do not store any information So, It is Secured."
             android:textSize="12sp"
-            android:text="We do not store any information So, It is Secured."/>
+            android:textStyle="bold" />
 
-        <View android:layout_width="match_parent"
+        <View
+            android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:background="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
             android:text="Recipient Email Id"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:background="@android:color/holo_blue_bright"/>
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/enter_Remail"
             android:layout_width="match_parent"
@@ -111,10 +114,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
             android:text="Email Title/Subject"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:background="@android:color/holo_blue_bright"/>
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/enter_title"
             android:layout_width="match_parent"
@@ -125,10 +129,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
             android:text="Email Text/Message (In HTML)"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:background="@android:color/holo_blue_bright"/>
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/enter_message"
             android:layout_width="match_parent"
@@ -139,14 +144,27 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp">
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/show_html_preview_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="show_html_preview"
+                android:text="HTML Preview"
+                android:textSize="14sp" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Send E-Mail"
-                android:textSize="22sp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/show_html_preview_btn"
                 android:onClick="sendMail"
-                android:layout_centerInParent = "true"/>
+                android:text="Send E-Mail"
+                android:textSize="18sp" />
+
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
